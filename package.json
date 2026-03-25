@@ -1,0 +1,23 @@
+{
+  "name": "civickit",
+  "private": true,
+  "packageManager": "npm@11.11.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "dev:civiclens": "cd apps/civiclens && npm run dev",
+    "dev:ballotkit": "cd apps/ballotkit && npm run dev",
+    "dev:rightsready": "cd apps/rightsready && npm run dev",
+    "dev:pressagent": "cd apps/pressagent && npm run dev",
+    "dev:mutualaid": "cd apps/mutualaid-os && npm run dev",
+    "dev:showcase": "cd apps/showcase && npm run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  }
+}
