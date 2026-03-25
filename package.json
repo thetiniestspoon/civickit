@@ -1,23 +1,32 @@
 {
   "name": "civickit",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "npm@11.11.0",
   "workspaces": [
-    "packages/*",
-    "apps/*"
+    "packages/*"
   ],
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "dev:civiclens": "cd apps/civiclens && npm run dev",
-    "dev:ballotkit": "cd apps/ballotkit && npm run dev",
-    "dev:rightsready": "cd apps/rightsready && npm run dev",
-    "dev:pressagent": "cd apps/pressagent && npm run dev",
-    "dev:mutualaid": "cd apps/mutualaid-os && npm run dev",
-    "dev:showcase": "cd apps/showcase && npm run dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@civickit/types": "*",
+    "@civickit/ui": "*",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "turbo": "^2.0.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
