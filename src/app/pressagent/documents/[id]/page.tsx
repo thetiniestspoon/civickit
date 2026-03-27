@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { demoDocuments } from "@/data/pressagent/demo-documents";
 
+export function generateStaticParams() {
+  return demoDocuments.map((d) => ({ id: d.id }));
+}
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }

@@ -1,8 +1,9 @@
-"use client";
-
-import { use } from "react";
 import { FlagButton } from "@civickit/ui";
 import { demoResources } from "@/data/mutualaid/demo-resources";
+
+export function generateStaticParams() {
+  return demoResources.map((r) => ({ id: r.id }));
+}
 
 const typeIcons: Record<string, string> = {
   food: "🍎",
@@ -23,12 +24,12 @@ const sourceLabels: Record<string, string> = {
   org_claimed: "Organization self-reported",
 };
 
-export default function ResourceDetailPage({
+export default async function ResourceDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = use(params);
+  const { id } = await params;
   const resource = demoResources.find((r) => r.id === id);
 
   if (!resource) {
