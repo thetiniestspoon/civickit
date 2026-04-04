@@ -4,7 +4,7 @@ import React from 'react';
 const navItems = [
   { label: 'Activity Feed', href: '/civiclens' },
   { label: 'Promise Tracker', href: '/civiclens/promises' },
-  { label: 'Representatives', href: '/civiclens/representatives/rep-001' },
+  { label: 'Representatives', href: '/civiclens/representatives' },
 ];
 
 export function CivicLensShell({
